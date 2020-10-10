@@ -44,6 +44,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumWinForm.cs" />
     <Compile Include="EnumValues.cs" />
     <Compile Include="UtilsProgressBarTests.cs" />
     <Compile Include="UtilsControlTests.cs" />

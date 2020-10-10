@@ -100,7 +100,7 @@ namespace WinForms.Utils.Tests
             TestContext.WriteLine($@"{nameof(SetBackColor_DoesNotThrow)} start.");
             while (_controls.TryDequeue(out Control control))
             {
-                foreach (var value in EnumValues.GetColor())
+                foreach (var value in EnumWinForm.GetColor())
                 {
                     Assert.DoesNotThrow(() => InvokeControl.SetBackColor(control, value));
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.SetBackColor(control, value)));
@@ -116,7 +116,7 @@ namespace WinForms.Utils.Tests
             TestContext.WriteLine($@"{nameof(SetForeColor_DoesNotThrow)} start.");
             while (_controls.TryDequeue(out Control control))
             {
-                foreach (var value in EnumValues.GetColor())
+                foreach (var value in EnumWinForm.GetColor())
                 {
                     Assert.DoesNotThrow(() => InvokeControl.SetForeColor(control, value));
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.SetForeColor(control, value)));
