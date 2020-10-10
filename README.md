@@ -7,6 +7,7 @@
 
 # WinForms.Utils.Tests
 - EnumValues
+- EnumWinForm
 - InvokeControlTests
 - InvokePictureBoxTests
 - InvokeProgressBarTests

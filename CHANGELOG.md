@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.1] - 2020-10-10
+## [0.2.5] - 2020-10-10
 ### Added
 - WinForms.Utils
   - InvokeControl
@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - UtilsProgressBar
 - WinForms.Utils.Tests
   - EnumValues
+  - EnumWinForm
   - InvokeControlTests
   - InvokePictureBoxTests
   - InvokeProgressBarTests
