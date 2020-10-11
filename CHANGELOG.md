@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.7] - 2020-10-11
+### Changed
+- WinForms.Utils.InvokeControl
+- WinForms.Utils.Tests.InvokeControlTests
+- LICENSE.md
+
 ## [0.2.5] - 2020-10-10
 ### Added
 - WinForms.Utils.InvokeControl
