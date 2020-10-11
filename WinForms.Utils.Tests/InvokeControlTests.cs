@@ -78,6 +78,22 @@ namespace WinForms.Utils.Tests
         }
 
         [Test]
+        public void AddText_DoesNotThrow()
+        {
+            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
+            TestContext.WriteLine($@"{nameof(AddText_DoesNotThrow)} start.");
+            while (_controls.TryDequeue(out Control control))
+            {
+                foreach (var value in EnumValues.GetString())
+                {
+                    Assert.DoesNotThrow(() => InvokeControl.AddText(control, value));
+                    Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.AddText(control, value)));
+                }
+            }
+            TestContext.WriteLine($@"{nameof(AddText_DoesNotThrow)} complete.");
+        }
+
+        [Test]
         public void SetVisible_DoesNotThrow()
         {
             TestContext.WriteLine(@"--------------------------------------------------------------------------------");
