@@ -29,6 +29,29 @@ namespace WinForms.Utils
             }
         }
 
+        public static void AddText(Control control, string value)
+        {
+            void Work(Control inControl, string inValue)
+            {
+                inControl.Text += inValue;
+            }
+
+            if (control != null)
+            {
+                if (control.InvokeRequired)
+                {
+                    control.Invoke(new Action(() =>
+                    {
+                        Work(control, value);
+                    }));
+                }
+                else
+                {
+                    Work(control, value);
+                }
+            }
+        }
+
         public static void SetVisible(Control control, bool value)
         {
             void Work(Control inControl, bool inValue)
