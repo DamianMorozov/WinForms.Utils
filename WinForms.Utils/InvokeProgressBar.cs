@@ -7,70 +7,64 @@ namespace WinForms.Utils
     {
         public static void SetValue(ProgressBar control, int value)
         {
+            if (control is null)
+                return;
             void Work(ProgressBar inControl, int inValue)
             {
                 inControl.Value = inValue;
             }
-
-            if (control != null)
+            if (control.InvokeRequired)
             {
-                if (control.InvokeRequired)
-                {
-                    control.Invoke(new Action(() =>
-                    {
-                        Work(control, value);
-                    }));
-                }
-                else
+                control.Invoke(new Action(() =>
                 {
                     Work(control, value);
-                }
+                }));
+            }
+            else
+            {
+                Work(control, value);
             }
         }
 
         public static void SetMinimum(ProgressBar control, int value)
         {
+            if (control is null)
+                return;
             void Work(ProgressBar inControl, int inValue)
             {
                 inControl.Minimum = inValue;
             }
-
-            if (control != null)
+            if (control.InvokeRequired)
             {
-                if (control.InvokeRequired)
-                {
-                    control.Invoke(new Action(() =>
-                    {
-                        Work(control, value);
-                    }));
-                }
-                else
+                control.Invoke(new Action(() =>
                 {
                     Work(control, value);
-                }
+                }));
+            }
+            else
+            {
+                Work(control, value);
             }
         }
 
         public static void SetMaximum(ProgressBar control, int value, int sleepTimeOutMs = 10)
         {
+            if (control is null)
+                return;
             void Work(ProgressBar inControl, int inValue)
             {
                 inControl.Maximum = inValue;
             }
-
-            if (control != null)
+            if (control.InvokeRequired)
             {
-                if (control.InvokeRequired)
-                {
-                    control.Invoke(new Action(() =>
-                    {
-                        Work(control, value);
-                    }));
-                }
-                else
+                control.Invoke(new Action(() =>
                 {
                     Work(control, value);
-                }
+                }));
+            }
+            else
+            {
+                Work(control, value);
             }
         }
     }
