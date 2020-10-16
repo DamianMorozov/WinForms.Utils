@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.11] - 2020-10-16
+### Added
+- Nuget package release
+### Changed
+- InvokeControl
+- InvokePictureBox
+- InvokeProgressBar
+
 ## [0.2.7] - 2020-10-11
 ### Changed
 - WinForms.Utils.InvokeControl
