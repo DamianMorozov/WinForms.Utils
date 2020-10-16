@@ -1,5 +1,5 @@
 # Utils for invoking WinForms conrols from threads and tasks.
-**[Download nuget package]("https://www.nuget.org/packages/WinForms.Utils/")**
+**<https://www.nuget.org/packages/WinForms.Utils/>**
 
 # WinForms.Utils
 - InvokeControl
