@@ -8,70 +8,64 @@ namespace WinForms.Utils
     {
         public static void SetBitmap(PictureBox control, Bitmap value)
         {
+            if (control is null)
+                return;
             void Work(PictureBox inControl, Bitmap inValue)
             {
                 inControl.Image = inValue;
             }
-
-            if (control != null)
+            if (control.InvokeRequired)
             {
-                if (control.InvokeRequired)
-                {
-                    control.Invoke(new Action(() =>
-                    {
-                        Work(control, value);
-                    }));
-                }
-                else
+                control.Invoke(new Action(() =>
                 {
                     Work(control, value);
-                }
+                }));
+            }
+            else
+            {
+                Work(control, value);
             }
         }
 
         public static void SetImage(PictureBox control, Image value)
         {
+            if (control is null)
+                return;
             void Work(PictureBox inControl, Image inValue)
             {
                 inControl.Image = inValue;
             }
-
-            if (control != null)
+            if (control.InvokeRequired)
             {
-                if (control.InvokeRequired)
-                {
-                    control.Invoke(new Action(() =>
-                    {
-                        Work(control, value);
-                    }));
-                }
-                else
+                control.Invoke(new Action(() =>
                 {
                     Work(control, value);
-                }
+                }));
+            }
+            else
+            {
+                Work(control, value);
             }
         }
 
         public static void SetBackgroundImage(PictureBox control, Image value)
         {
+            if (control is null)
+                return;
             void Work(PictureBox inControl, Image inValue)
             {
                 inControl.BackgroundImage = inValue;
             }
-
-            if (control != null)
+            if (control.InvokeRequired)
             {
-                if (control.InvokeRequired)
-                {
-                    control.Invoke(new Action(() =>
-                    {
-                        Work(control, value);
-                    }));
-                }
-                else
+                control.Invoke(new Action(() =>
                 {
                     Work(control, value);
-                }
+                }));
+            }
+            else
+            {
+                Work(control, value);
             }
         }
     }
