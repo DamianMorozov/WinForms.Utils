@@ -44,13 +44,10 @@ namespace WinForms.Utils.Tests
 
         #endregion
 
-        #region Public properties
-
         [Test]
         public void SetValue_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetValue_DoesNotThrow)} start.");
+            Utils.MethodStart();
             foreach (var progressBar in _progressBars)
             {
                 foreach (var value in EnumValues.GetProgress())
@@ -59,14 +56,13 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeProgressBar.SetValue(progressBar, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetValue_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetMinimum_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetMinimum_DoesNotThrow)} start.");
+            Utils.MethodStart();
             foreach (var progressBar in _progressBars)
             {
                 foreach (var value in EnumValues.GetProgress())
@@ -75,14 +71,13 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeProgressBar.SetMinimum(progressBar, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetMinimum_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetMaximum_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetMaximum_DoesNotThrow)} start.");
+            Utils.MethodStart();
             foreach (var progressBar in _progressBars)
             {
                 foreach (var value in EnumValues.GetProgress())
@@ -91,9 +86,7 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeProgressBar.SetMaximum(progressBar, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetMaximum_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
-
-        #endregion
     }
 }
