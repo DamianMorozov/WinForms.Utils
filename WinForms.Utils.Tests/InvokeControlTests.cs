@@ -48,8 +48,7 @@ namespace WinForms.Utils.Tests
         [Test]
         public void SetEnabled_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetEnabled_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 foreach (var value in EnumValues.GetBool())
@@ -58,14 +57,13 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.SetEnabled(control, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetEnabled_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetText_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetText_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 foreach (var value in EnumValues.GetString())
@@ -74,14 +72,13 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.SetText(control, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetText_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void AddText_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(AddText_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 foreach (var value in EnumValues.GetString())
@@ -90,14 +87,13 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.AddText(control, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(AddText_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetVisible_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetVisible_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 foreach (var value in EnumValues.GetBool())
@@ -106,14 +102,13 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.SetVisible(control, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetVisible_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetBackColor_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetBackColor_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 foreach (var value in EnumWinForm.GetColor())
@@ -122,14 +117,13 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.SetBackColor(control, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetBackColor_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetForeColor_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetForeColor_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 foreach (var value in EnumWinForm.GetColor())
@@ -138,33 +132,31 @@ namespace WinForms.Utils.Tests
                     Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.SetForeColor(control, value)));
                 }
             }
-            TestContext.WriteLine($@"{nameof(SetForeColor_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void Focus_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(Focus_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 Assert.DoesNotThrow(() => InvokeControl.Focus(control));
                 Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.Focus(control)));
             }
-            TestContext.WriteLine($@"{nameof(Focus_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void Select_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(Select_DoesNotThrow)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out Control control))
             {
                 Assert.DoesNotThrow(() => InvokeControl.Select(control));
                 Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokeControl.Select(control)));
             }
-            TestContext.WriteLine($@"{nameof(Select_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
     }
 }
