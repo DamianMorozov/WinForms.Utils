@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="EnumWinForm.cs" />
     <Compile Include="EnumValues.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="UtilsProgressBarTests.cs" />
     <Compile Include="UtilsControlTests.cs" />
     <Compile Include="InvokePictureBoxTests.cs" />
