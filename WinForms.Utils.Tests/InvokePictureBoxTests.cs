@@ -23,8 +23,7 @@ namespace WinForms.Utils.Tests
         [SetUp]
         public void Setup()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(Setup)} start.");
+            Utils.MethodStart();
             _pictureBoxes = new ConcurrentQueue<PictureBox>();
             for (var i = 0; i < 10; i++)
             {
@@ -36,7 +35,7 @@ namespace WinForms.Utils.Tests
                 _image = Image.FromFile(filePng);
                 _bitmap = (Bitmap)Image.FromFile(filePng);
             }
-            TestContext.WriteLine($@"{nameof(Setup)} complete.");
+            Utils.MethodComplete();
         }
 
         /// <summary>
@@ -45,50 +44,45 @@ namespace WinForms.Utils.Tests
         [TearDown]
         public void Teardown()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(Teardown)} start.");
+            Utils.MethodStart();
             while (_pictureBoxes.TryDequeue(out _)) { }
-            TestContext.WriteLine($@"{nameof(Teardown)} complete.");
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetBackgroundImage_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetBackgroundImage_DoesNotThrow)} start.");
+            Utils.MethodStart();
             foreach (var pictureBox in _pictureBoxes)
             {
                 Assert.DoesNotThrow(() => InvokePictureBox.SetBackgroundImage(pictureBox, _image));
                 Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokePictureBox.SetBackgroundImage(pictureBox, _image)));
             }
-            TestContext.WriteLine($@"{nameof(SetBackgroundImage_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetBitmap_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetBitmap_DoesNotThrow)} start.");
+            Utils.MethodStart();
             foreach (var pictureBox in _pictureBoxes)
             {
                 Assert.DoesNotThrow(() => InvokePictureBox.SetBitmap(pictureBox, _bitmap));
                 Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokePictureBox.SetBitmap(pictureBox, _bitmap)));
             }
-            TestContext.WriteLine($@"{nameof(SetBitmap_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
 
         [Test]
         public void SetImage_DoesNotThrow()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(SetImage_DoesNotThrow)} start.");
+            Utils.MethodStart();
             foreach (var pictureBox in _pictureBoxes)
             {
                 Assert.DoesNotThrow(() => InvokePictureBox.SetImage(pictureBox, _bitmap));
                 Assert.DoesNotThrowAsync(async () => await Task.Run(() => InvokePictureBox.SetImage(pictureBox, _bitmap)));
             }
-            TestContext.WriteLine($@"{nameof(SetImage_DoesNotThrow)} complete.");
+            Utils.MethodComplete();
         }
     }
 }
