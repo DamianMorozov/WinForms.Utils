@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.15] - 2020-10-17
+### Added
+- WPF.Utils.Tests.Utils
+### Changed
+- InvokeControlTests
+- InvokePictureBoxTests
+- InvokeProgressBarTests
+
 ## [0.2.11] - 2020-10-16
 ### Added
 - Nuget package release
