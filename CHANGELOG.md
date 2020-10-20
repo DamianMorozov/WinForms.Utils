@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.16] - 2020-10-20
+### Changed
+- NuGet package description
+
 ## [0.2.15] - 2020-10-17
 ### Added
 - WPF.Utils.Tests.Utils
@@ -16,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.11] - 2020-10-16
 ### Added
-- Nuget package release
+- NuGet package release
 ### Changed
 - InvokeControl
 - InvokePictureBox
