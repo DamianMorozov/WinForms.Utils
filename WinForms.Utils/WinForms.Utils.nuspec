@@ -2,9 +2,9 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>0.2.16</version>
-    <title>WinForms.Utils</title>
-    <authors>Damian Viktorovich Morozov</authors>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/DamianMorozov/WinForms.Utils/</projectUrl>

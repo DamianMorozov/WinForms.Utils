@@ -18,3 +18,14 @@
 - InvokeProgressBarTests
 - UtilsControlTests
 - UtilsProgressBarTests
+
+## How to use
+Example of usage:
+
+```C#
+var task = Task.Run(async () =>
+{
+    InvokeControl.SetVisible(button, false);
+    await Task.Delay(TimeSpan.FromMilliseconds(_timeout));
+});
+```

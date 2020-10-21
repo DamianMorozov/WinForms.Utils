@@ -6,25 +6,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.19] - 2020-10-21
+### Changed
+- WinForms.Utils.Tests.EnumValues
+
 ## [0.2.16] - 2020-10-20
 ### Changed
 - NuGet package description
 
 ## [0.2.15] - 2020-10-17
 ### Added
-- WPF.Utils.Tests.Utils
+- WinForms.Utils.Tests.Utils
 ### Changed
-- InvokeControlTests
-- InvokePictureBoxTests
-- InvokeProgressBarTests
+- WinForms.Utils.Tests.InvokeControlTests
+- WinForms.Utils.Tests.InvokePictureBoxTests
+- WinForms.Utils.Tests.InvokeProgressBarTests
 
 ## [0.2.11] - 2020-10-16
 ### Added
 - NuGet package release
 ### Changed
-- InvokeControl
-- InvokePictureBox
-- InvokeProgressBar
+- WinForms.Utils.InvokeControl
+- WinForms.Utils.InvokePictureBox
+- WinForms.Utils.InvokeProgressBar
 
 ## [0.2.7] - 2020-10-11
 ### Changed

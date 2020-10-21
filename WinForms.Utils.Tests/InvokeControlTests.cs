@@ -19,8 +19,7 @@ namespace WinForms.Utils.Tests
         [SetUp]
         public void Setup()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(Setup)} start.");
+            Utils.MethodStart();
             _controls = new ConcurrentQueue<Control>();
             for (var i = 0; i < 10; i++)
             {
@@ -29,7 +28,7 @@ namespace WinForms.Utils.Tests
                 _controls.Enqueue(new CheckBox());
                 _controls.Enqueue(new TextBox());
             }
-            TestContext.WriteLine($@"{nameof(Setup)} complete.");
+            Utils.MethodComplete();
         }
 
         /// <summary>
@@ -38,11 +37,9 @@ namespace WinForms.Utils.Tests
         [TearDown]
         public void Teardown()
         {
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
-            TestContext.WriteLine($@"{nameof(Teardown)} start.");
+            Utils.MethodStart();
             while (_controls.TryDequeue(out _)) { }
-            TestContext.WriteLine($@"{nameof(Teardown)} complete.");
-            TestContext.WriteLine(@"--------------------------------------------------------------------------------");
+            Utils.MethodComplete();
         }
 
         [Test]

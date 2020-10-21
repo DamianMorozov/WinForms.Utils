@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 // ReSharper disable UnusedMember.Global
-// Last changed 2020-10-10.
+// Last changed 2020-10-21.
 
 namespace WinForms.Utils.Tests
 {
@@ -73,6 +74,15 @@ namespace WinForms.Utils.Tests
         }
 
         /// <summary>
+        /// List of DateTime values.
+        /// </summary>
+        /// <returns></returns>
+        public static List<DateTime> GetDateTime()
+        {
+            return new List<DateTime>() { DateTime.MinValue, DateTime.MaxValue, DateTime.Now, DateTime.Today, DateTime.UtcNow };
+        }
+
+        /// <summary>
         /// String value.
         /// </summary>
         /// <param name="str"></param>
@@ -80,6 +90,15 @@ namespace WinForms.Utils.Tests
         public static string AsString(this string str)
         {
             return str == null ? "<null>" : str == "" ? "<empty>" : str;
+        }
+
+        /// <summary>
+        /// List of uri values.
+        /// </summary>
+        /// <returns></returns>
+        public static List<Uri> GetUri()
+        {
+            return new List<Uri>() { new Uri("http://google.com/"), new Uri("http://microsoft.com/") };
         }
     }
 }
